@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fielding CPA Group</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #56aebc;
+      --dark: #0f2f33;
+      --text: #2e2e2e;
+      --muted: #6b6b6b;
+      --bg: #ffffff;
+      --soft: #f4f7f8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: #111;
+    }
+
+    h1{
+     color:white;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    header {
+      min-height: 100vh;
+      background: url('images/hero-beach.jpg') center/cover no-repeat;
+      position: relative;
+      color: white;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(15,47,51,0.55);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 22vh;
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.9rem 1.8rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 6rem 1.5rem;
+    }
+
+    .center {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* SERVICES */
+    .services {
+      max-width: 1200px;
+      margin: 4rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      position: relative;
+      height: 320px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    }
+
+    .card h3 {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      color: white;
+      z-index: 1;
+      font-size: 1.8rem;
+    }
+
+    /* CTA */
+    .soft {
+      background: var(--soft);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: #cbd7d9;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .contact-card-content {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact-card h2 {
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-info p {
+      color: #cbd7d9;
+      font-size: 1.1rem;
+    }
+
+    .contact-info a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .hero { margin-top: 18vh; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <strong>FIELDING CPA GROUP</strong>
+    </nav>
+
+    <div class="hero">
+      <h1>Our Strength.<br>Your Numbers.</h1>
+      <a class="btn" href="#contact">Schedule a Consultation</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="center">
+    <h2>Accounting is what we do best.</h2>
+    <p>Fielding CPA Group delivers clear, strategic accounting for individuals and businesses who want things done right the first time.</p>
+    <a class="btn" href="#contact" style="margin-top:2rem;">Learn More</a>
+  </div>
+</section>
+
+<section>
+  <div class="services">
+    <div class="card" style="background-image:url('images/service-tax.jpg')">
+      <h3>Tax Services</h3>
+    </div>
+    <div class="card" style="background-image:url('images/service-individual.jpg')">
+      <h3>Individual Services</h3>
+    </div>
+    <div class="card" style="background-image:url('images/service-business.jpg')">
+      <h3>Business Services</h3>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="center">
+    <h2>Today's tax laws are complicated.</h2>
+    <p>Even small mistakes can cost real money. A trusted CPA helps you stay compliant, maximize deductions, and avoid expensive surprises.</p>
+    <a class="btn" href="#contact" style="margin-top:2rem;">Schedule a Consultation</a>
+  </div>
+</section>
+
+<section class="contact-card" id="contact">
+  <div class="contact-card-content">
+    <h2>Ready to Work Together?</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:alisa@fieldingcpa.com">alisa@fieldingcpa.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:941-375-9311">941-375-9311</a></p>
+    </div>
+    <a class="btn" href="#">Schedule a Consultation</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Fielding CPA Group · All Rights Reserved
+</footer>
+
+</body>
+</html>
